@@ -11,5 +11,17 @@ services:
     instance_size_slug: basic-xxs
     name: backend
     routes:
-      - path: /
+      - path: /api
     source_dir: backend
+  - dockerfile_path: frontend/Dockerfile
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: Anrymart/wd3-sample-app
+    http_port: 80
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    name: frontend
+    routes:
+      - path: /
+    source_dir: frontend
