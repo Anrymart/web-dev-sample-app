@@ -1,0 +1,15 @@
+name: wd3-sample-app
+region: fra
+services:
+  - dockerfile_path: backend/Dockerfile
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: Anrymart/wd3-sample-app
+    http_port: 80
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    name: backend
+    routes:
+      - path: /
+    source_dir: backend
