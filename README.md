@@ -1,4 +1,4 @@
-# wd3-sample-app
+# web-dev-sample-app
 
 ## Backend
 
